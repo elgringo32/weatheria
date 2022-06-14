@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <script defer src="https://kit.fontawesome.com/6dbed7fcf7.js" crossorigin="anonymous"></script>
     <title>Weatheria</title>
 </head>
 <body>
-    <header class="header">
-
-    </header>
     <section id="container">
         <section id="side">
-            <h1 class="title"> WEATHERIA </h1>
-            <form action="">
+            <div id="move-back">
+                <i class="fa-brands fa-searchengin fa-beat-fade"></i>
+            </div>
+            <h1 class="title"> <span class="one">WE</span><span class="two">AT</span><span class="three">H</span><span class="four">ER</span><span class="five">IA</span> </h1>
+            <form action="getInfo" method="post">
                 <input type="text" name="city" id="city" placeholder="Enter a City">
-                <a href="#"> <button class="search-button" type="button"> Search </button> </a>
+                <a href="#"> <button type="submit" class="search-button" type="button"> Search </button> </a>
             </form>
         </section>
 

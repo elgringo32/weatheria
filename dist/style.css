@@ -9,11 +9,11 @@
     max-width: 100vw;
     overflow: auto;
     align-items: center;
+    background-color: antiquewhite;
 }
 #side{
     position: relative;
-    border: 1px solid black;
-    height: 50vh;
+    height: 70vh;
     transition: width 3s;
     display: flex;
     flex-flow: column;
@@ -23,14 +23,28 @@
     width: 200vw;
     transition: all 3s ease-in-out;
     overflow: hidden;
+    background-image: url(../src/images/cloud-unsplash.jpg);
+    background-size: cover;
+}
+#move-back{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fdf498;
+    opacity: 0.2;
 }
 #main{
     position: relative;
-    border: 1px solid red;
-    height: 80vh;
+    height: 90vh;
     right: 0;
     transition: all 3s ease-in-out;
     width: 100%;
+    background-color: antiquewhite;
 }
 form{
     display: flex;
@@ -42,23 +56,45 @@ h1{
     line-height: 3rem;
     width: 100%;
     text-align: center;
+    transition: opacity 2s ease-in-out;
+    opacity: 1;
+}
+.one{
+    color: #ee4035;
+}
+.two{
+    color: #f37736
+}
+.three{
+    color: #fdf498;
+}
+.four{
+    color: #7bc043;
+}
+.five{
+    color: #0392cf;
 }
 input{
-    height: 2rem;
+    height: 2.5rem;
     width: 100%;
-    padding: 7px;
+    padding: 10px;
     border-radius: 100px;
     margin-bottom: 1rem;
+    border: 1px solid transparent;
+    box-shadow: 4px 4px 4px;
+    text-align: center;
 }
 button{
     height: 2rem;
-    width: 4rem;
+    width: 5rem;
+    border-radius: 30px;
+    background-color: #fdf498;
+    cursor: pointer;
 }
-.header{
-    height: 10vh;
-    border: 1px solid yellow;
+button:active{
+    transform: translateY(3px);
 }
 .footer {
     height: 10vh;
-    border: 1px solid yellow;
+    background-color: darkgray;
 }
