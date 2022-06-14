@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container{
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 100vw;
+    overflow: auto;
+    align-items: center;
+}
+#side{
+    position: relative;
+    border: 1px solid black;
+    height: 50vh;
+    transition: width 3s;
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    width: 200vw;
+    transition: all 3s ease-in-out;
+    overflow: hidden;
+}
+#main{
+    position: relative;
+    border: 1px solid red;
+    height: 80vh;
+    right: 0;
+    transition: all 3s ease-in-out;
+    width: 100%;
+}
+form{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+h1{
+    font-size: 4rem;
+    line-height: 3rem;
+    width: 100%;
+    text-align: center;
+}
+input{
+    height: 2rem;
+    width: 100%;
+    padding: 7px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+}
+button{
+    height: 2rem;
+    width: 4rem;
+}
+.header{
+    height: 10vh;
+    border: 1px solid yellow;
+}
+.footer {
+    height: 10vh;
+    border: 1px solid yellow;
+}
