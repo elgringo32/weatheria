@@ -13,10 +13,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.static("dist"));
+app.set("views", "./dist/views");
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
   try {
-    res.sendFile("./index.html");
+    res.render("index.ejs");
   } catch (error) {
     console.log(error);
   }

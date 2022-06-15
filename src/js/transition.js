@@ -6,7 +6,8 @@ const transition = () => {
   const moveBack = document.querySelector("#move-back");
   const main = document.querySelector("#main");
 
-  submit.addEventListener("click", () => {
+  submit.addEventListener("click", (e) => {
+    e.preventDefault();
     side.style.width = "20vw";
     title.style.opacity = "0.2";
     side.style.opacity = "0.5";

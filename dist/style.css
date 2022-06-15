@@ -48,6 +48,10 @@
     transition: all 3s ease-in-out;
     width: 100%;
     background-color: antiquewhite;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5rem;
 }
 form{
     display: flex;
@@ -100,6 +104,40 @@ input{
 #submit:active{
     transform: translateY(3px);
 }
+/* -------------------------------------- MAIN ---------------------------------------------- */
+.photo{
+    display: flex;
+    flex-flow: row nowrap;
+    width: inherit;
+    gap: 0.5rem;
+}
+.crucial-forecast{
+    width: 35%;
+    border: 1px solid red;
+    height: 40vh;
+    margin-top: 0.3rem;
+}
+.location-photo{
+    width: 63%;
+    height: 40vh;
+    border: 1px solid black;
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.forecast-details{
+    width: 98%;
+    height: 45vh;
+    border: 1px solid blue;
+}
+.weekly-forecast{
+    width: 70%;
+    height: inherit;
+    border: 1px solid green;
+}
+
+/* -------------------------------------END OF MAIN ------------------------------------------- */
 .footer {
     height: 10vh;
     background-color: darkgray;
