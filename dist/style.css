@@ -23,7 +23,7 @@
     width: 200vw;
     transition: all 3s ease-in-out;
     overflow: hidden;
-    background-image: url(../src/images/cloud-unsplash.jpg);
+    background-image: url(./images/cloud-unsplash.jpg);
     background-size: cover;
 }
 #move-back{
@@ -35,7 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fdf498;
+    color: yellowgreen;
     opacity: 0.2;
 }
 #main{
@@ -84,14 +84,14 @@ input{
     box-shadow: 4px 4px 4px;
     text-align: center;
 }
-button{
+#submit{
     height: 2rem;
     width: 5rem;
     border-radius: 30px;
     background-color: #fdf498;
     cursor: pointer;
 }
-button:active{
+#submit:active{
     transform: translateY(3px);
 }
 .footer {
