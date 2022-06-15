@@ -1,5 +1,3 @@
-import { transition } from "./transition";
-
+import { transition } from "./transition.js";
 
 transition();
-

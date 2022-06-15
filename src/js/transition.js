@@ -7,13 +7,14 @@ const transition = () => {
   const main = document.querySelector("#main");
 
   submit.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     side.style.width = "20vw";
     title.style.opacity = "0.2";
     side.style.opacity = "0.5";
     moveBack.style.opacity = "1";
     moveBack.style.cursor = "pointer";
     main.style.backgroundColor = "navajowhite";
+    // input.innerText = "";
   });
   moveBack.addEventListener("click", () => {
     side.style.width = "200vw";

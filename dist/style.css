@@ -94,6 +94,9 @@ input{
     box-shadow: 4px 4px 4px;
     text-align: center;
 }
+input:focus{
+    outline: none;
+}
 #submit{
     height: 2rem;
     width: 5rem;

@@ -1,20 +1,32 @@
-const express = require("express");
+import { createApi } from "unsplash-js";
+import express from "express";
+import fetch from "node-fetch";
+
+global.fetch = fetch;
 const app = express();
-var bodyParser = require("body-parser");
-const PORT = 8000;
+const PORT = process.env.PORT;
 require("dotenv").config();
 
-app.use(
-  bodyParser.urlencoded({
-    extended: true,
-  })
-);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(bodyParser.json());
 app.use(express.static("dist"));
 app.set("views", "./dist/views");
 app.set("view engine", "ejs");
+
+const unsplash = createApi({
+  accessKey: process.env.UNSPLASH_ACCESS_KEY,
+});
+
+// FETCH CITY PICTURE FROM UNSPLASH
+const fetchPhoto = async (city) => {
+  const photo = await unsplash.search.getPhotos({
+    query: city,
+    page: 1,
+    perPage: 10,
+    orientation: "landscape",
+  });
+  return photo;
+};
 
 app.get("/", (req, res) => {
   try {
@@ -26,13 +38,15 @@ app.get("/", (req, res) => {
 
 app.post("/getInfo", (req, res) => {
   try {
-    console.log(req.body);
-    // console.log(req);
+    const city = req.body.city;
+    console.log(city);
+    const photo = fetchPhoto(city);
+    console.log(photo);
   } catch (error) {
     console.log(error);
   }
 });
 
-app.listen(process.env.PORT || PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
