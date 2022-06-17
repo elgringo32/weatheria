@@ -20,7 +20,7 @@ const transition = () => {
     side.style.width = "200vw";
     title.style.opacity = "1";
     side.style.opacity = "1";
-    moveBack.style.opacity = "0.2";
+    moveBack.style.opacity = "0.8";
     main.style.backgroundColor = "antiquewhite";
   });
 };
