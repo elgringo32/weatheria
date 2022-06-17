@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <script defer src="https://kit.fontawesome.com/6dbed7fcf7.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://kit.fontawesome.com/6dbed7fcf7.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Weatheria</title>
-</head>
+  </head>
 
-<body>
-    <section id="container" class="preload" data-router-wrapper >
-        <section id="side" style="opacity: 0.2; width: 20vw;">
-            <div id="move-back">
-                <i class="fa-brands fa-searchengin fa-beat-fade" style="filter: brightness(100%); opacity: 1;"></i>
+  <body>
+    <section id="container" class="preload" data-router-wrapper>
+      <section id="side" style="opacity: 0.2; width: 20vw">
+        <div id="move-back">
+          <i
+            class="fa-brands fa-searchengin fa-beat-fade"
+            style="filter: brightness(100%); opacity: 1"
+          ></i>
+        </div>
+        <h1 class="title">
+          <span class="one">WE</span><span class="two">AT</span
+          ><span class="three">H</span><span class="four">ER</span
+          ><span class="five">IA</span>
+        </h1>
+        <form action="getInfo" method="POST" name="city">
+          <input type="text" name="city" id="city" placeholder="Enter a City" />
+          <input type="submit" id="submit" />
+        </form>
+      </section>
+
+      <section id="main" data-router-view="info">
+        <img
+          src="<%= image.image %>"
+          alt="<%= image.text %>"
+          srcset=""
+          style="
+            height: inherit;
+            width: inherit;
+            position: absolute;
+            filter: brightness(30%);
+          "
+        />
+        <div class="photo">
+
+          <div class="crucial-forecast">
+            <div class="location-name">
+                <h2>
+                    Welcome to <%= image.city %>
+                </h2>
             </div>
-            <h1 class="title"> <span class="one">WE</span><span class="two">AT</span><span class="three">H</span><span
-                    class="four">ER</span><span class="five">IA</span> </h1>
-            <form action="getInfo" method="POST" name="city">
-                <input type="text" name="city" id="city" placeholder="Enter a City">
-                <input type="submit" id="submit">
-            </form>
-        </section>
-
-        <section id="main" data-router-view="info">
-            <img src="<%= image.image %>" alt="<%= image.text %>" srcset="" style="height: inherit; width: inherit; position: absolute; filter: brightness(40%);">
-            <div class="photo">
-
-                <div class="crucial-forecast">
+            <div class="forecast-main">
+                <div class="main" style="display: flex; flex-flow: row wrap">
+                    <h3> Main Temp. </h3>
+                    <h3> <%= weather.main.temp %> </h3>
+                </div>
+                <div class="description">
 
                 </div>
-                <div class="location-photo">
-                    
-
-                    <div class="location-name">
-                        <h2> <%= image.city %> </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="forecast-details">
-                <div class="weekly-forecast">
+                <div class="icon">
 
                 </div>
+
             </div>
-        </section>
+
+          </div>
+
+        </div>
+
+        <div class="weekly-forecast-wrapper">
+          <div class="weekly-forecast"></div>
+        </div>
+      </section>
     </section>
-    <footer class="footer">
-
-    </footer>
+    <footer class="footer"></footer>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>

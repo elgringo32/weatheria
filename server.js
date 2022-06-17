@@ -34,6 +34,15 @@ const fetchPhoto = async (city) => {
   return { randomPhoto, photoAltDescription };
 };
 
+// FETCH WEATHER INFO FROM OPEN WEATHER API
+const fetchWeather = async (city) => {
+  const weather =
+    await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.OPEN_WEATHER_KEY}&units=metric`)
+  return weather
+}
+
+
+
 app.get("/", (req, res) => {
   try {
     res.render("index.ejs");
@@ -52,12 +61,19 @@ app.post("/getInfo", async (req, res) => {
     const image = {
       image: photo,
       text: altText,
-      city: city,
+      city: city.toUpperCase()
     };
     console.log(photo);
     console.log(altText);
+
+    let weather = (await fetchWeather(city)).json()
+    weather = await weather
+    console.log(weather)
+    console.log(weather.main.temp)
+
     res.render("info.ejs", {
       image: image,
+      weather: weather,
     });
   } catch (error) {
     console.log(error);
