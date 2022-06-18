@@ -135,32 +135,26 @@ input:focus{
 .crucial-forecast{
     width: 98%;
     border: 1px solid red;
-    height: 40vh;
+    height: 85vh;
     margin-top: 0.3rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
-.weekly-forecast-wrapper{
-    width: 98%;
-    height: 45vh;
-    border: 1px solid blue;
-    position: relative;
-}
-.weekly-forecast{
-    width: inherit;
-    height: inherit;
-    border: 1px solid green;
-}
 .forecast-main{
     border: 1px solid green;
     width: inherit;
-    height: 20vh;
+    height: 30vh;
     display: flex;
     flex-flow: column nowrap;
 }
 .location-name{
     height: fit-content;
+}
+.forcast-other{
+    width: inherit;
+    height: 40vh;
+    border: 1px solid yellow;
 }
 
 /* -------------------------------------END OF MAIN ------------------------------------------- */

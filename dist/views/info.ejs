@@ -38,29 +38,19 @@
       </section>
 
       <section id="main" data-router-view="info">
-        <img
-          src="<%= image.image %>"
-          alt="<%= image.text %>"
-          srcset=""
-          style="
-            height: inherit;
-            width: inherit;
-            position: absolute;
-            filter: brightness(30%);
-          "
-        />
+      <img class="bg-image">
         <div class="photo">
 
           <div class="crucial-forecast">
             <div class="location-name">
                 <h2>
-                    Welcome to <%= image.city %>
+                    Welcome to location
                 </h2>
             </div>
             <div class="forecast-main">
                 <div class="main" style="display: flex; flex-flow: row wrap">
                     <h3> Main Temp. </h3>
-                    <h3> <%= weather.main.temp %> </h3>
+                    <h3> 29.89 </h3>
                 </div>
                 <div class="description">
 
@@ -68,15 +58,14 @@
                 <div class="icon">
 
                 </div>
+              </div>
 
             </div>
+            <div class="forecast-other">
 
+            </div>
           </div>
 
-        </div>
-
-        <div class="weekly-forecast-wrapper">
-          <div class="weekly-forecast"></div>
         </div>
       </section>
     </section>

@@ -53,28 +53,27 @@ app.get("/", (req, res) => {
 
 app.post("/getInfo", async (req, res) => {
   try {
-    const city = req.body.city;
-    console.log(city);
+    // const city = req.body.city;
 
-    const photo = (await fetchPhoto(city)).randomPhoto;
-    const altText = (await fetchPhoto(city)).photoAltDescription;
-    const image = {
-      image: photo,
-      text: altText,
-      city: city.toUpperCase()
-    };
-    console.log(photo);
-    console.log(altText);
+    // const photo = (await fetchPhoto(city)).randomPhoto;
+    // const altText = (await fetchPhoto(city)).photoAltDescription;
+    // const image = {
+    //   image: photo,
+    //   text: altText,
+    //   city: city.toUpperCase()
+    // };
 
-    let weather = (await fetchWeather(city)).json()
-    weather = await weather
-    console.log(weather)
-    console.log(weather.main.temp)
+    // let weather = (await fetchWeather(city)).json()
+    // weather = await weather
+    // console.log(weather)
+    // console.log(weather.main.temp)
 
-    res.render("info.ejs", {
-      image: image,
-      weather: weather,
-    });
+    res.render("info.ejs", 
+    // {
+    //   image: image,
+    //   weather: weather,
+    // }
+    );
   } catch (error) {
     console.log(error);
   }
