@@ -1,14 +1,14 @@
-// import { transition } from "./transition.js";
-// import highway from "@dogstudio/highway";
-// import Fade from "./highway-transition.js";
+import { transition } from "./transition.js";
+import highway from "@dogstudio/highway";
+import Fade from "./highway-transition.js";
 
-// window.addEventListener("load", () => {
+window.addEventListener("load", () => {
 
-//   const H = new highway.Core({
-//     transitions: {
-//       default: Fade,
-//     },
-//   });
+  const H = new highway.Core({
+    transitions: {
+      default: Fade,
+    },
+  });
 
-//   // transition();
-// });
+  
+});

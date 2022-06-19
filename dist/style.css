@@ -8,83 +8,42 @@
 }
 #container{
     display: flex;
-    flex-flow: row nowrap;
-    max-width: 100vw;
+    flex-flow: row wrap;
+    height: 93vh;
+    width: 100vw;
     overflow: auto;
     align-items: center;
     background-color: antiquewhite;
 }
 #side{
-    position: relative;
-    height: 70vh;
-    transition: width 3s;
     display: flex;
     flex-flow: column;
     gap: 4rem;
     justify-content: center;
     align-items: center;
-    width: 200vw;
-    /* transition: all 3s ease-in-out; */
+    width: inherit;
     overflow: hidden;
     background-image: url(./images/cloud-unsplash.jpg);
     background-size: cover;
 }
-i{
-    color: yellow;
-    cursor: pointer;
-    /* background-color: yellow; */
-    opacity: 1;
-}
-#move-back{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    height: 2rem;
-    width: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
 #main{
-    position: relative;
-    height: 90vh;
-    right: 0;
-    /* transition: all 3s ease-in-out; */
-    width: 100%;
-    background-color: antiquewhite;
-    display: flex;
-    flex-flow: row wrap;
+    width: inherit;
     justify-content: center;
-    gap: 0.5rem;
 }
 form{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column;
+    align-items: center;
 }
 h1{
     font-family: 'Poppins', 'Montserrat', 'Courier New', Courier, monospace;
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 3rem;
+    letter-spacing: 2.5rem;
     width: 100%;
     text-align: center;
-    transition: opacity 2s ease-in-out;
-    opacity: 1;
     font-style: italic;
     font-weight: 300;
-}
-h2{
-    color: #eee;
-    font-family: 'FontAwesome';
-    padding: 50px;
-    font-size: 2.1rem;
-    letter-spacing: 0.5rem;
-}
-h3{
-    color: white;
-    font-size: 2rem;
-    width: fit-content;
 }
 .one{
     color: #ee4035;
@@ -103,63 +62,78 @@ h3{
 }
 input{
     height: 2.5rem;
-    width: 100%;
-    padding: 10px;
+    width: 35vw;
+    padding: 15px;
     border-radius: 100px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     border: 1px solid transparent;
     box-shadow: 4px 4px 4px;
     text-align: center;
+    font-family: "poppins", "Montserrat";
+}
+#city{
+    font-size: 1.3rem;
 }
 input:focus{
     outline: none;
 }
 #submit{
-    height: 2rem;
+    height: 3rem;
     width: 5rem;
     border-radius: 30px;
     background-color: #fdf498;
+    font-family: 'Poppins';
     cursor: pointer;
+    font-weight: 400;
 }
 #submit:active{
     transform: translateY(3px);
 }
 /* -------------------------------------- MAIN ---------------------------------------------- */
-.photo{
+.forecast-container{
     display: flex;
-    flex-flow: row nowrap;
-    width: inherit;
-    gap: 0.5rem;
-    position: relative;
-}
-.crucial-forecast{
-    width: 98%;
-    border: 1px solid red;
-    height: 85vh;
-    margin-top: 0.3rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    width: 85vw;
+    gap: 4rem;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px black;
+    filter: drop-shadow(2px 4px 6px beige)
 }
 .forecast-main{
-    border: 1px solid green;
-    width: inherit;
-    height: 30vh;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    background-color: rgba(000, 000, 000, 0.4);
+    color: navajowhite;
+    font-size: 1.8rem;
 }
-.location-name{
-    height: fit-content;
+.forecast-secondary{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background-color: rgba(000, 000, 000, 0.4);
+    color: navajowhite;
+    font-size: 1.3rem;
 }
-.forcast-other{
-    width: inherit;
-    height: 40vh;
-    border: 1px solid yellow;
+h2,
+h3,
+p{
+    font-family: 'Montserrat';
 }
+#pressure{
+    display: flex;
+    gap: 0.35rem;
+}
+
 
 /* -------------------------------------END OF MAIN ------------------------------------------- */
 .footer {
-    height: 10vh;
+    height: 7vh;
     background-color: darkgray;
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
