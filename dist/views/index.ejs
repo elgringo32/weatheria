@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Weatheria</title>
-</head>
-<body>
-    <section id="container" data-router-wrapper >
-        <section id="side" style="height: 60vh;">
-            
-            <h1 class="title"> <span class="one">WE</span><span class="two">AT</span><span class="three">H</span><span class="four">ER</span><span class="five">IA</span> </h1>
-            <form action="getInfo" method="POST" name="city">
-                <input type="text" name="city" id="city" placeholder="Enter a City">
-                <input type="submit" id="submit">
-            </form>
-        </section>
+  </head>
+  <body>
+    <section id="container" data-router-wrapper>
+      <section id="side" style="height: 60vh">
+        <h1 class="title">
+          <span class="one">WE</span><span class="two">AT</span
+          ><span class="three">H</span><span class="four">ER</span
+          ><span class="five">IA</span>
+        </h1>
+        <form action="getInfo" method="POST" name="city">
+          <input type="text" name="city" id="city" placeholder="Enter a City" />
+          <input type="submit" id="submit" />
+        </form>
+      </section>
 
-        <section id="main" data-router-view="home" style="display: none;">
+      <div class="popup" id="popup">
+        <div class="popup-overlay"></div>
+        <div class="popup-inner">
+          <div class="load-animation"></div>
+          <h2>Loading.....</h2>
+        </div>
+      </div>
 
-            <div class="forecast-container">
-                <div class="forecast-main">
-                    <div class="main-temp">
-                        <h2> Temp </h2>
-                        <p> location </p>
-                    </div>
-                    <div class="main-condition">
-                        <h2> condition </h2>
-                        <p> description </p>
-                    </div>
-                    
-                </div>
-
-                <div class="forecast-secondary">
-                    <div class="feels-like">
-                        <h2> feels like </h2>
-                        <h3> Temp </h3>
-                    </div>
-                    <div class="humidity">
-                        <h2> humidity </h2>
-                        <h3> Temp </h3>
-                    </div>
-                    <div class="pressure">
-                        <h2> Pressure </h2>
-                        <h3> value </h3>
-                    </div>
-                    <div class="min-temp">
-                        <h2> Min-temp </h2>
-                        <h3> temp </h3>
-                    </div>
-                    <div class="max-temp">
-                        <h2> Max-temp </h2>
-                        <h3> Temp </h3>
-                    </div>
-                
-                </div>
+      <section id="main" data-router-view="home" style="display: none">
+        <div class="forecast-container">
+          <div class="forecast-main">
+            <div class="main-temp">
+              <h2>Temp</h2>
+              <p>location</p>
             </div>
-        
-        </section>
-        
+            <div class="main-condition">
+              <h2>condition</h2>
+              <p>description</p>
+            </div>
+          </div>
+
+          <div class="forecast-secondary">
+            <div class="feels-like">
+              <h2>feels like</h2>
+              <h3>Temp</h3>
+            </div>
+            <div class="humidity">
+              <h2>humidity</h2>
+              <h3>Temp</h3>
+            </div>
+            <div class="pressure">
+              <h2>Pressure</h2>
+              <h3>value</h3>
+            </div>
+            <div class="min-temp">
+              <h2>Min-temp</h2>
+              <h3>temp</h3>
+            </div>
+            <div class="max-temp">
+              <h2>Max-temp</h2>
+              <h3>Temp</h3>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
     <footer class="footer">
-        <div>
-            <h2> MADE WITH  </h2>
-        </div>
+      <div>
+        <h2 id="main-footer-heading">MADE WITH ❤️ FROM GIDI</h2>
+      </div>
     </footer>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>

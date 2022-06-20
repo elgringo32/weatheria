@@ -1,4 +1,4 @@
-import highway from "@dogstudio/highway";
+import Highway from "@dogstudio/highway";
 import { Tween } from "gsap/gsap-core";
 
 // CREATE FADE CLASS FROM TRANSITION CLASS IN HIGHWAY
