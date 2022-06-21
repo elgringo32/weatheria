@@ -12,6 +12,7 @@
     "serve": "webpack serve",
     "frontend": "cd dist && npm start",
     "api": "cd .. && nodemon -r esm server.js",
+    "heroku-prebuild": "npm install --dev",
     "heroku-postbuild": "cd dist && npm install && npm run build"
   },
   "keywords": [],
