@@ -4,7 +4,6 @@ import fetch from "node-fetch";
 
 global.fetch = fetch;
 const app = express();
-const PORT = process.env.PORT;
 require("dotenv").config();
 
 app.use(express.urlencoded({ extended: true }));
@@ -75,6 +74,6 @@ app.post("/getInfo", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(process.env.PORT || 8000, () => {
+  console.log(`Server running`);
 });
