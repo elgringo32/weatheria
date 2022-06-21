@@ -42,7 +42,7 @@ const fetchWeather = async (city) => {
   return weather;
 };
 
-app.get("/", (req, res) => {
+app.get("https://weatheria-app.herokuapp.com/", (req, res) => {
   try {
     res.render("index.ejs");
   } catch (error) {
