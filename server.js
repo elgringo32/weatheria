@@ -50,15 +50,15 @@ app.get("/", (req, res) => {
   }
 });
 
-app.post("/getInfo", async (req, res) => {
+app.post("https://weatheria-app.herokuapp.com/info", async (req, res) => {
   try {
     const city = req.body.city;
 
-    const photo = (await fetchPhoto(city)).randomPhoto;
-    const altText = (await fetchPhoto(city)).photoAltDescription;
+    // const photo = (await fetchPhoto(city)).randomPhoto;
+    // const altText = (await fetchPhoto(city)).photoAltDescription;
     const image = {
-      image: photo,
-      text: altText,
+      // image: photo,
+      // text: altText,
       city: city.toUpperCase(),
     };
 
