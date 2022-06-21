@@ -5,10 +5,14 @@
   "private": "true",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
     "build": "webpack --mode=production --node-env=production",
     "watch": "webpack --watch",
     "dev": "nodemon -r esm server.js",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "frontend": "cd dist && npm start",
+    "api": "cd .. && nodemon -r esm server.js",
+    "heroku-postbuild": "cd dist && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
