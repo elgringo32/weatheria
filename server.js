@@ -1,10 +1,11 @@
 import { createApi } from "unsplash-js";
 import express from "express";
 import fetch from "node-fetch";
+import dotenv from "dotenv";
 
 global.fetch = fetch;
 const app = express();
-require("dotenv").config();
+dotenv.config();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
