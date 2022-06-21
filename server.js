@@ -50,7 +50,7 @@ app.get("/", (req, res) => {
   }
 });
 
-app.post("/getInfo", async (req, res) => {
+app.post("https://weatheria-app.herokuapp.com/getInfo", async (req, res) => {
   try {
     const city = req.body.city;
 
