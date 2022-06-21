@@ -42,7 +42,7 @@ const fetchWeather = async (city) => {
   return weather;
 };
 
-app.get("https://weatheria-app.herokuapp.com/", (req, res) => {
+app.get("/", (req, res) => {
   try {
     res.render("index.ejs");
   } catch (error) {
@@ -50,7 +50,7 @@ app.get("https://weatheria-app.herokuapp.com/", (req, res) => {
   }
 });
 
-app.post("https://weatheria-app.herokuapp.com/getInfo", async (req, res) => {
+app.post("/getInfo", async (req, res) => {
   try {
     const city = req.body.city;
 
