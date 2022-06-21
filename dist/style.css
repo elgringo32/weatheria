@@ -134,6 +134,18 @@ input:focus {
   font-weight: 500px;
   text-align: center;
 }
+.load-animation {
+  border-radius: 50%;
+  animation: spin 3.5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* -------------------------------------- MAIN ---------------------------------------------- */
 .forecast-container {
   display: flex;

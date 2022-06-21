@@ -20,7 +20,24 @@
       </form>
     </section>
 
-    <section id="main" data-router-view="home" style="background-image: url('<%= image.image %>'); background-size: cover; filter: brightness(40%); height: 65vh; display: flex;">
+    <div class="popup" id="popup">
+        <div class="popup-overlay"></div>
+        <div class="popup-inner">
+          <div class="load-animation">
+            <div class="first-row">
+              <img src="../images/icons/rain.png" alt="rain-icon" />
+              <img src="../images/icons/snow.png" alt="snow-icon" />
+            </div>
+            <div class="second-row">
+              <img src="../images/icons/sun.png" alt="sun-icon" />
+              <img src="../images/icons/wind.png" alt="wind-icon" />
+            </div>
+          </div>
+          <h2>Loading...</h2>
+        </div>
+      </div>
+
+    <section id="main" data-router-view="home" style="background-image: url('<%= image.image %>'); background-size: cover; filter: brightness(70%); height: 65vh; display: flex;">
       <div class="forecast-container">
         <div class="forecast-main">
           <div class="main-temp">
@@ -31,7 +48,7 @@
             <h2> <%= weather.weather[0].main %> </h2>
             <p> <%= weather.weather[0].description %> </p>
           </div>
-          <img src="<%= icon %>" alt=" weather icon " srcset="" style="backdrop-filter: grayscale(1);">
+          <img src="<%= icon %>" alt=" weather icon " srcset="" style="backdrop-filter: invert(0.45);">
         </div>
 
         <div class="forecast-secondary">
