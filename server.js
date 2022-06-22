@@ -1,15 +1,13 @@
 import { createApi } from "unsplash-js";
 import express from "express";
-// import fetch from "node-fetch";
-const fetch = (...args) =>
-  import("node-fetch").then(({ default: fetch }) => fetch(...args));
+import fetch from "node-fetch";
 import dotenv from "dotenv";
 
 global.fetch = fetch;
 const app = express();
 dotenv.config();
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("dist"));
 app.set("views", "./dist/views");
@@ -24,7 +22,7 @@ const fetchPhoto = async (city) => {
   const photo = await unsplash.search.getPhotos({
     query: city,
     page: 1,
-    perPage: 20,
+    perPage: 10,
     orientation: "landscape",
     contentFilter: "high",
     orderBy: "relevant",
@@ -52,7 +50,7 @@ app.get("/", (req, res) => {
   }
 });
 
-app.post("/", async (req, res) => {
+app.post("/info", async (req, res) => {
   try {
     const city = req.body.city;
 
