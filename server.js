@@ -2,14 +2,14 @@ import { createApi } from "unsplash-js";
 import express from "express";
 // import fetch from "node-fetch";
 const fetch = (...args) =>
-  import('node-fetch').then(({ default: fetch }) => fetch(...args));
+  import("node-fetch").then(({ default: fetch }) => fetch(...args));
 import dotenv from "dotenv";
 
 global.fetch = fetch;
 const app = express();
 dotenv.config();
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("dist"));
 app.set("views", "./dist/views");
@@ -52,7 +52,7 @@ app.get("/", (req, res) => {
   }
 });
 
-app.post("https://weatheria-app.herokuapp.com/info", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const city = req.body.city;
 
@@ -67,6 +67,7 @@ app.post("https://weatheria-app.herokuapp.com/info", async (req, res) => {
     let weather = (await fetchWeather(city)).json();
     weather = await weather;
     const icon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
+
     res.render("info.ejs", {
       image: image,
       weather: weather,
