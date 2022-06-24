@@ -37,5 +37,14 @@
     "express": "^4.18.1",
     "node-fetch": "^2.6.7",
     "unsplash-js": "^7.0.15"
-  }
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zoro-chi/weather-APP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zoro-chi/weather-APP/issues"
+  },
+  "homepage": "https://github.com/Zoro-chi/weather-APP#readme"
 }

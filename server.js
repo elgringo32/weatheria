@@ -39,7 +39,7 @@ const fetchPhoto = async (city) => {
 // FETCH WEATHER INFO FROM OPEN WEATHER API
 const fetchWeather = async (city) => {
   const weather = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.OPEN_WEATHER_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.OPEN_WEATHER_KEY}&units=imperial`
   );
   return weather;
 };
@@ -66,6 +66,7 @@ app.post("/info", async (req, res) => {
 
     let weather = (await fetchWeather(city)).json();
     weather = await weather;
+    console.log(weather)
     const icon = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
 
     res.render("info.ejs", {
